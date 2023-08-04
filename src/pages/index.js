@@ -1,0 +1,1 @@
+//Can use to consoditade by exporting all routes from this file then the routes import will be a single line one the app.js
