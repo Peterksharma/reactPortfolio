@@ -1,0 +1,45 @@
+body{
+    background-color: black;
+}
+
+h1 {
+    color: red
+}
+
+.video-banner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .video {
+    width: 100%;
+    height: 90vh; /* You can also set a fixed height */
+    object-fit: cover; /* This helps to cover the full container */
+  }
+  
+.headerBanner, .footerBanner{
+    background-color: black;
+}
+
+.bannerTxt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers the text */
+    color: white; 
+    justify-content: center;
+    align-items: center;
+    text-shadow: rgb(0, 0, 0) 1px 0 30px;
+}
+
+#bannerName{
+    font-size: 10vh;
+    font-weight: 700;
+}
+
+#title{
+    font-size: 5vh;
+    font-weight: 500;
+    margin-top: -7.5%;
+}

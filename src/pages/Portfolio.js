@@ -1,7 +1,13 @@
 import React from 'react';
+import Project from '../components/Project'
 
 function Portfolio() {
-  return <div>Portfolio</div>;
+  return (
+
+  <div>
+    <Project />
+    </div>
+  )
 }
 
 export default Portfolio;
