@@ -24,7 +24,8 @@ function Footer() {
         fontSize: '40px',
         margin: '20px 30px',
         zIndex: '11',
-        color: '#1282A2'
+        color: '#1282A2',
+        textShadow: '-2px 2px 4px rgb(0, 0, 0)'
     }
 
     const footerLinkStyle = {

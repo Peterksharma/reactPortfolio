@@ -9,8 +9,7 @@ function Header() {
         borderTop: '10vh solid #1A181B',
         zIndex: '2',
         position: 'absolute',
-        top: '0%'
-        
+        top: '0%',        
     }
 
     return (
