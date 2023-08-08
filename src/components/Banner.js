@@ -1,20 +1,32 @@
 import * as React from 'react';
-import Button from '@mui/material/Button';
 import bannerVideo from '../assets/video/banner_video.mp4'
 
 function Banner() {
+  const bannerStyle = {
+    position: 'relative',
+    overflow: 'hidden',
+    width: '100%',
+    height: '100vh',
+  }
+
+  const videoStyle = {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100vh',
+    objectFit: 'cover',
+    zIndex: '1'
+  }
+
   return (
-    <div>
+    <div style={bannerStyle}>
       <div className="video-banner">
-        <video autoPlay loop muted className="video">
+        <video autoPlay loop muted style={videoStyle}>
           <source src={bannerVideo} type="video/mp4" />
         </video>
       </div>
-      <div className='bannerTxt'>
-        <p id='bannerName'>Peter Sharma</p>
-        <p id='title'>Software Developer</p>
-        <Button id='portfolio' variant="contained">Projects</Button>
-        </div>
+
     </div>
   );
 }
