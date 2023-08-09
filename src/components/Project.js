@@ -4,6 +4,7 @@ import { Paper, Button } from '@mui/material'
 import coinImage from '../assets/images/coinCollector3000.png';
 import dataWizard from '../assets/images/dataWizard.png'
 import elevate from '../assets/images/elevate.png'
+import portfolio from '../assets/images/portfolio.png'
 
 
 
@@ -50,15 +51,39 @@ function Project(props) {
                     label: "Express.js",
                     color: "404D59",
                     logoColor: 'black'
+                },
+                {
+                    label: "Node.js",
+                    color: "43853D",
+                    logoColor: 'white'
                 }
             ]
         },
         {
             name: "",
-            description: "Hello World!",
+            description: "",
             img: dataWizard,
             deployedApp: 'https://peterksharma-structure-wizard-app-v4gp2f.streamlit.app/',
             githubRepo: "https://github.com/Peterksharma/Structure-wizard",
+            technologies: [
+                {
+                    label: "Python",
+                    color: "14354C",
+                    logoColor: "White"
+                },
+                {
+                    label: "ChatGPT",
+                    color: "74aa9c",
+                    logoColor: "White"
+                },
+            ]
+        },
+        {
+            name: "",
+            description: "",
+            img: portfolio,
+            deployedApp: 'www.petersharma.dev',
+            githubRepo: "https://github.com/Peterksharma/portfolio",
             technologies: [
                 {
                     label: "HTML",
@@ -69,13 +94,21 @@ function Project(props) {
                     label: "JavaScript",
                     color: "323330",
                     logoColor: "F7DF1E"
-                }
+                },                {
+                    label: "CSS",
+                    color: "239120",
+                    logoColor: "white"
+                },
+                {
+                    label: "Debdian",
+                    color: "A81D33",
+                    logoColor: "White"
+                },
             ]
         },
     ]
 
     const projectStyle = {
-        opacity: '90%',
         position: 'absolute',
         top: '50%',
         left: '50%',
@@ -93,7 +126,7 @@ function Project(props) {
                 navButtonsAlwaysVisible={true}
                 navButtonsProps={{
                     style: {
-                        backgroundColor: '#1282A2',
+                        backgroundColor: '#1A181B',
                         borderRadius: 2,
                         color: 'white',
                         margin: '0 30px',
@@ -126,9 +159,12 @@ function Item(props) {
         flexDirection: 'row',  // Items should layout horizontally
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: 'white',
-        border: '.75rem solid #1A181B',
-        borderRadius: '2%',
+        borderRadius: '3%',
+        background: 'rgba(255, 255, 255, 0.45)',
+        boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
+        backdropFilter: 'blur(20px)',
+        WebkitBackdropFilter: 'blur(20px)',
+        border: '1vh solid rgba(255, 255, 255, 0.78)'
     };
 
     const deployedLink = {
@@ -168,6 +204,13 @@ function Item(props) {
         padding: '5px',
     }
 
+    const imgShadow = {
+        boxShadow: '0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12)'
+    }
+    const txtShadow = {
+        textShadow: '0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12)'
+    }
+
     return (
         <Paper style={paperStyle}>
             <div style={leftContentStyle}>
@@ -191,11 +234,11 @@ function Item(props) {
             </div>
 
             <div style={rightContentStyle}>
-                <h3>Technologies Used</h3>
+                <h3 style={txtShadow}>Technologies Used</h3>
                 <div>
                 {props.item.technologies && props.item.technologies.map(tech => (
                     <div style={badgeLayout} key={tech.label}>
-                        <img 
+                        <img style={imgShadow}
                             src={`https://img.shields.io/badge/${tech.label}-${tech.color}?style=for-the-badge&logo=${tech.label}&logoColor=${tech.logoColor}`} 
                             alt={`${tech.label} Badge`}
                         />

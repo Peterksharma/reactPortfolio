@@ -10,32 +10,33 @@ function About() {
         color: 'white',
         justifyContent: 'center',
         alignItems: 'center',
-        textShadow: '-2px 4px 6px rgb(0, 0, 0)',
+        textShadow: '0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12)',
         letterSpacing: '.2em',
         zIndex: '33',
         textAlign: 'center',
         width: '70%',
-        background: 'rgba(0, 0, 0, 0.7)',
-        borderRadius: '2%',
-        padding: '2%'
+        padding: '2%',
+        borderRadius: '3%',
+        background: 'rgba(255, 255, 255, 0.45)',
+        boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
+        backdropFilter: 'blur(20px)',
+        WebkitBackdropFilter: 'blur(20px)',
+        border: '1vh solid rgba(255, 255, 255, 0.78)'
         
         
     };
 
-    const header = (
-        <h2 style={{textAlign: 'center', color:'#1282A2', fontWeight:'850', fontSize:'350%'}}>About Me</h2>
-    );
-
 
     return (
         <div style={aboutMeStyle}>
-            <Card header={header} className="md:w-25rem">
+            <Card className="md:w-25rem">
                 <p className="m-0">
+                <p>
                     Hello, and welcome to my corner of the internet! My name is Peter Sharma, and I'm a culinary
                     aficionado, 3D printing enthusiast, and burgeoning full-stack web developer based out of the vibrant
                     city of
                     Austin, Texas.
-                    
+                    </p>
                     <p>
                     My journey started back in 2009, when I attended culinary school and embarked on an exciting career
                     in the culinary industry. I've always had a particular passion for creating handmade pasta and

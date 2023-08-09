@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/reactPortfolio/static/css/main.c71871af.css",
+    "main.js": "/reactPortfolio/static/js/main.88379be6.js",
+    "static/media/banner_video.mp4": "/reactPortfolio/static/media/banner_video.41cab17992ea17b006f5.mp4",
+    "static/media/coinCollector3000.png": "/reactPortfolio/static/media/coinCollector3000.ae53623478722f000bd6.png",
+    "static/media/dataWizard.png": "/reactPortfolio/static/media/dataWizard.ca1c0945f40f45799ba7.png",
+    "static/media/elevate.png": "/reactPortfolio/static/media/elevate.98923196ea47ac7ed11a.png",
+    "index.html": "/reactPortfolio/index.html",
+    "main.c71871af.css.map": "/reactPortfolio/static/css/main.c71871af.css.map",
+    "main.88379be6.js.map": "/reactPortfolio/static/js/main.88379be6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c71871af.css",
+    "static/js/main.88379be6.js"
+  ]
+}

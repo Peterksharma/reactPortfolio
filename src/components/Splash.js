@@ -11,7 +11,7 @@ function Splash() {
     color: 'white',
     justifyContent: 'center',
     alignItems: 'center',
-    textShadow: '-2px 4px 10px rgb(0, 0, 0)',
+    textShadow: '0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12)',
     letterSpacing: '.2em',
     zIndex: '3',
     textAlign: 'center'

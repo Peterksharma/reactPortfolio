@@ -10,15 +10,17 @@ function Navigation() {
     zIndex: '21',
     position: 'absolute',
     top: '-8.5vh',
-    left: '-3vw'
+    left: '-5vw',
+    marginRight: '-4%' 
+
   }
 
   const btnStyle = {
     color: '#1282A2',
     width: '100px',
-    fontSize: '15px',
+    fontSize: '95%',
     fontWeight: '550',
-    textShadow: '-2px 1px 4px rgb(0, 0, 0)',
+    textShadow: '0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12)',
   }
 
   const btnHoverStyle = {

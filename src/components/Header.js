@@ -7,7 +7,7 @@ function Header() {
         borderLeft: '15vw solid transparent',
         borderRight: '85vw solid transparent',
         borderTop: '10vh solid #1A181B',
-        zIndex: '2',
+        zIndex: '5',
         position: 'absolute',
         top: '0%',        
     }

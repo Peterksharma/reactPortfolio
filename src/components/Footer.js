@@ -16,36 +16,43 @@ function Footer() {
         borderLeft: '85vw solid transparent',
         borderRight: '15vw solid transparent',
         borderBottom: '10vh solid #1A181B',
-        zIndex:'10'
+        zIndex: '10'
     }
 
 
     const iconSize = {
-        fontSize: '40px',
-        margin: '20px 30px',
+        fontSize: '300%',
+        // margin: '0 1%',
         zIndex: '11',
         color: '#1282A2',
-        textShadow: '-2px 2px 4px rgb(0, 0, 0)'
+        textShadow: '0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12)',
+    }
+
+    const iconHoverStyle = {
+        '&:hover': {
+            color: '#C5E0D8',
+        }
     }
 
     const footerLinkStyle = {
         position: "absolute",
         display: 'flex',
-        right: '-43px',
-        top: '5px'
+        gap: '20%',
+        right: '4vw',
+        top: '3vh'
     }
     return (
         <div style={footerStyle}>
             <div style={footerLinkStyle}>
-            <a href="http://github.com/peterksharma" target='_blank' rel="noopener noreferrer">
-                <GitHubIcon style={iconSize}/>
-            </a>
-            <a href="http://linkedin.com/in/Peterksharma" target='_blank' rel="noopener noreferrer">
-            <LinkedInIcon style={iconSize} />
-            </a>
-            <a href="mailto:peterksharma@gmail.com" target='_blank' rel="noopener noreferrer">
-            <EmailIcon style={iconSize} />
-            </a>
+                <a href="http://github.com/peterksharma" target='_blank' rel="noopener noreferrer">
+                    <GitHubIcon sx={{ ...iconHoverStyle, ...iconSize }} />
+                </a>
+                <a href="http://linkedin.com/in/Peterksharma" target='_blank' rel="noopener noreferrer">
+                    <LinkedInIcon sx={{ ...iconHoverStyle, ...iconSize }} />
+                </a>
+                <a href="mailto:peterksharma@gmail.com" target='_blank' rel="noopener noreferrer">
+                    <EmailIcon sx={{ ...iconHoverStyle, ...iconSize }} />
+                </a>
             </div>
         </div>
     )
