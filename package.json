@@ -5,7 +5,10 @@
   "homepage": "https://Peterksharma.github.io/reactPortfolio",
   "engines": {
     "node": "18.17.0"
-  },  
+  },
+  "babel": {
+    "plugins": ["@babel/plugin-proposal-private-property-in-object"]
+  },
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
