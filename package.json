@@ -3,6 +3,9 @@
   "version": "1.33.7",
   "private": true,
   "homepage": "https://Peterksharma.github.io/reactPortfolio",
+  "engines": {
+    "node": "18.17.0"
+  },  
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
@@ -30,7 +33,6 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "heroku-postbuild": "npm run build"
-
   },
   "eslintConfig": {
     "extends": [
@@ -49,5 +51,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
   }
 }
