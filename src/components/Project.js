@@ -154,7 +154,7 @@ function Project(props) {
 
 function Item(props) {
     const paperStyle = {
-        height: '600px',
+        height: '70vh',
         display: 'flex',     // Change to flex for horizontal layout
         flexDirection: 'row',  // Items should layout horizontally
         justifyContent: 'center',
@@ -164,21 +164,33 @@ function Item(props) {
         boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
         backdropFilter: 'blur(20px)',
         WebkitBackdropFilter: 'blur(20px)',
-        border: '1vh solid rgba(255, 255, 255, 0.78)'
+        border: '1vh solid rgba(255, 255, 255, 0.78)',
+        '@media (maxWidth: 480px)': {
+            width: '85vw',
+            flexDirection: 'column', // Stack content vertically
+            height: 'auto',
+            padding: '20px',
+        }
     };
 
     const deployedLink = {
         backgroundColor: '#C5E0D8',
         color: '#1A181B',
-        width: '250px',
+        width: '15vw',
+        '@media (maxWidth: 480px)': {
+            width: '100%', // Full width button
+        }
     }
+
     const gitHubLink = {
         backgroundColor: '#1282A2',
-        width: '250px',
-        marginTop: '5px'
-
-
+        width: '15vw',
+        marginTop: '5px',
+        '@media (maxWidth: 480px)': {
+            width: '100%', // Full width button
+        }
     }
+
     const leftContentStyle = {
         flex: 1,
         paddingLeft: '60px',
@@ -186,7 +198,11 @@ function Item(props) {
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-    };
+        '@media (maxWidth: 480px)': {
+            paddingLeft: '0',
+            marginBottom: '20px'
+        }
+    }
 
     const rightContentStyle = {
         flex: 1,
@@ -194,6 +210,9 @@ function Item(props) {
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
+        '@media (maxWidth: 480px)': {
+            padding: '0 10px'
+        }
     };
     
     const badgeLayout = {
@@ -202,10 +221,20 @@ function Item(props) {
         justifyContent: 'center',
         alignItems: 'center',
         padding: '5px',
+        '@media (maxWidth: 480px)': {
+            flexDirection: 'row',
+            margin: '5px 0'
+        }
     }
 
     const imgShadow = {
-        boxShadow: '0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12)'
+        boxShadow: '0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12)',
+        '@media (maxWidth: 480px)': {
+            width: '100%', // Full width image
+            height: 'auto',
+            border: 'none', // Removing the border for small screens, can adjust this
+            boxShadow: 'none' // Adjusting the shadow for smaller screens
+        }
     }
     const txtShadow = {
         textShadow: '0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12)'
@@ -215,7 +244,7 @@ function Item(props) {
         <Paper style={paperStyle}>
             <div style={leftContentStyle}>
                 <h2 style={{ fontSize: '2em' }}>{props.item.name}</h2>
-                <img src={props.item.img} alt={props.item.name} style={{ width: '100%', height: 'auto', border: '.75rem solid #1A181B', boxShadow: '0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12)' }} />
+                <img src={props.item.img} alt={props.item.name} style={{ width: '100%', height: 'auto', border: '.5rem solid #1A181B', boxShadow: '0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12)' }} />
                 <p style={{ fontSize: '1.2em' }}>{props.item.description}</p>
 
                 {props.item.deployedApp && (

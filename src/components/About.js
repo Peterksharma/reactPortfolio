@@ -4,9 +4,9 @@ import { Card } from 'primereact/card';
 function About() {
     const aboutMeStyle = {
         position: 'absolute',
-        top: '50%',
+        top: '13vh',
         left: '50%',
-        transform: 'translate(-50%, -50%)',
+        transform: 'translateX(-50%)',
         color: 'white',
         justifyContent: 'center',
         alignItems: 'center',
@@ -14,23 +14,49 @@ function About() {
         letterSpacing: '.2em',
         zIndex: '33',
         textAlign: 'center',
-        width: '70%',
+        width: '80%',
         padding: '2%',
         borderRadius: '3%',
         background: 'rgba(255, 255, 255, 0.45)',
         boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
         backdropFilter: 'blur(20px)',
         WebkitBackdropFilter: 'blur(20px)',
-        border: '1vh solid rgba(255, 255, 255, 0.78)'
-        
-        
+        border: '1vh solid rgba(255, 255, 255, 0.78)',
+        height: 'auto', // Adjust this to the desired fixed height
+        maxHeight: '70%',  // Adjust this based on the minimum height you want
+        overflowY: 'auto', // This makes the content scrollable if it exceeds the height  
+    };
+
+    // const aboutMeStyle = {
+    //     margin: '13vh auto',
+    //     width: '80%',
+    //     maxheight: 'calc(87vh - 2% - 2vh)', // This ensures that the box won't exceed the viewport height
+    //     background: 'rgba(255, 255, 255, 0.45)',
+    //     boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
+    //     backdropFilter: 'blur(20px)',
+    //     WebkitBackdropFilter: 'blur(20px)',
+    //     border: '1vh solid rgba(255, 255, 255, 0.78)',
+    //     borderRadius: '3%',
+    //     padding: '2%',
+    //     textAlign: 'center',
+    //     letterSpacing: '.2em',
+    //     zIndex: '33',
+    //     overflowY: 'auto',
+    // };
+    
+
+    const cardContentStyle = {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        height: '75%',
     };
 
 
     return (
         <div style={aboutMeStyle}>
-            <Card className="md:w-25rem">
-                <p className="m-0">
+            <Card className="md:w-25rem" style={cardContentStyle}>
+                <div className="m-0">
                 <p>
                     Hello, and welcome to my corner of the internet! My name is Peter Sharma, and I'm a culinary
                     aficionado, 3D printing enthusiast, and burgeoning full-stack web developer based out of the vibrant
@@ -63,7 +89,7 @@ function About() {
                     Thank you for stopping by my website, I hope you enjoy exploring my diverse world of interests and
                     experiences. I look forward to sharing my journey and learning from all of you along the way.
                     </p>
-                </p>
+                </div>
             </Card>
         </div>
     );

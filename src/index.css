@@ -15,6 +15,18 @@
     font-size: 5vh;
     font-weight: 500;
     color: #1282A2
-    
-    /* margin-top: -7.5%; */
+
+}
+
+/* Media Query Sizes */
+/* Mobile (Smartphone) max-width: 480px
+Low Resolution Tablets and ipads max-width: 767px
+Tablets Ipads portrait mode max-width:1024px
+Desktops max-width:1280px */
+
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 16px; 
+        background-color: lightgrey;
+    }
 }
