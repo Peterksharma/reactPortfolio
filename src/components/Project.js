@@ -160,6 +160,7 @@ function Item(props) {
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: '3%',
+        // backgroundColor: 'white',
         background: 'rgba(255, 255, 255, 0.45)',
         boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
         backdropFilter: 'blur(20px)',

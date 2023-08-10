@@ -4,7 +4,7 @@ import { Card } from 'primereact/card';
 function About() {
     const aboutMeStyle = {
         position: 'absolute',
-        top: '13vh',
+        top: '18%',
         left: '50%',
         transform: 'translateX(-50%)',
         color: 'white',
