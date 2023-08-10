@@ -82,7 +82,7 @@ function Project(props) {
             name: "",
             description: "",
             img: portfolio,
-            deployedApp: 'www.petersharma.dev',
+            deployedApp: 'http://www.petersharma.dev',
             githubRepo: "https://github.com/Peterksharma/portfolio",
             technologies: [
                 {
