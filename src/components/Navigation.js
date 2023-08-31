@@ -11,7 +11,10 @@ function Navigation() {
     position: 'absolute',
     top: '-8.5vh',
     left: '-5vw',
-    marginRight: '-4%' 
+    marginRight: '-4%',
+    '@media (maxWidth: 480px)': {
+      color: 'white',
+    }
 
   }
 

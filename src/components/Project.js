@@ -5,11 +5,58 @@ import coinImage from '../assets/images/coinCollector3000.png';
 import dataWizard from '../assets/images/dataWizard.png'
 import elevate from '../assets/images/elevate.png'
 import portfolio from '../assets/images/portfolio.png'
+import furryfeet from '../assets/images/furryFeet.png'
 
 
 
 function Project(props) {
     var items = [
+        {
+            name: "",
+            description: "",
+            img: furryfeet,
+            deployedApp: 'https://furryfeetfinal-db9205523da5.herokuapp.com/',
+            githubRepo: "https://github.com/Peterksharma/ecommerce",
+            technologies: [
+                {
+                    label: "HTML",
+                    color: "239120",
+                    logoColor: "white"
+                },
+                {
+                    label: "CSS",
+                    color: "2965F1",
+                    logoColor: "white"
+                },
+                {
+                    label: "JavaScript",
+                    color: "323330",
+                    logoColor: "F7DF1E"
+                },
+                {
+                    label: "React",
+                    color: "61DAFB",
+                    logoColor: "20232A"
+                },
+                {
+                    label: "GraphQL",
+                    color: "E10098",
+                    logoColor: "white"
+                },
+                {
+                    label: "MongoDB",
+                    color: "4DB33D",
+                    logoColor: "white"
+                },
+                {
+                    label: "ThreeJs",
+                    color: "8AC64A",
+                    logoColor: "black"
+                }
+            ]
+
+
+        },
         {
             name: "",
             description: "",
@@ -27,7 +74,7 @@ function Project(props) {
                     logoColor: "F7DF1E"
                 }
             ]
-            
+
 
         },
         {
@@ -94,7 +141,7 @@ function Project(props) {
                     label: "JavaScript",
                     color: "323330",
                     logoColor: "F7DF1E"
-                },                {
+                }, {
                     label: "CSS",
                     color: "239120",
                     logoColor: "white"
@@ -215,7 +262,7 @@ function Item(props) {
             padding: '0 10px'
         }
     };
-    
+
     const badgeLayout = {
         display: 'flex',
         flexDirection: 'column',
@@ -266,16 +313,16 @@ function Item(props) {
             <div style={rightContentStyle}>
                 <h3 style={txtShadow}>Technologies Used</h3>
                 <div>
-                {props.item.technologies && props.item.technologies.map(tech => (
-                    <div style={badgeLayout} key={tech.label}>
-                        <img style={imgShadow}
-                            src={`https://img.shields.io/badge/${tech.label}-${tech.color}?style=for-the-badge&logo=${tech.label}&logoColor=${tech.logoColor}`} 
-                            alt={`${tech.label} Badge`}
-                        />
-                    </div>
-                ))}
+                    {props.item.technologies && props.item.technologies.map(tech => (
+                        <div style={badgeLayout} key={tech.label}>
+                            <img style={imgShadow}
+                                src={`https://img.shields.io/badge/${tech.label}-${tech.color}?style=for-the-badge&logo=${tech.label}&logoColor=${tech.logoColor}`}
+                                alt={`${tech.label} Badge`}
+                            />
+                        </div>
+                    ))}
                 </div>
-                            </div>
+            </div>
         </Paper>
     )
 }
